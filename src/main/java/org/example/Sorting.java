@@ -2,15 +2,15 @@ package org.example;
 
 public class Sorting {
 
-    public static void mergeSort(int[] input, int start, int end) {
+    public static void sort(int[] input, int start, int end) {
 
         if (end - start < 2) {
             return;
         }
 
         int mid = (start + end) / 2;
-        mergeSort(input, start, mid);
-        mergeSort(input, mid, end);
+        sort(input, start, mid);
+        sort(input, mid, end);
         merge(input, start, mid, end);
     }
 
@@ -30,7 +30,6 @@ public class Sorting {
 
         System.arraycopy(input, i, input, start + tempIndex, middle - i);
         System.arraycopy(temp, 0, input, start, tempIndex);
-
     }
 }
 

@@ -45,9 +45,7 @@ public class ParameterizedTest {
                 { startClosedParens, false },
                 { mismatchedBrackets, false }
         };
-
         return Arrays.asList(expectedOutputs);
-
     }
 
     @Test
